@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: Process API - Saludos
+  description: API orquestadora que combina saludos y mensajes del sistema
+  version: 1.0.0
+servers:
+  - url: http://localhost:8082/api/v1
+paths:
+  /api/v1/saludos:
+    post:
+      tags:
+        - Saludos
+      summary: Orquesta llamadas a SAPIs para generar un saludo compuesto
+      operationId: createSaludos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaludoRequest"
+      responses:
+        "200":
+          description: Saludo orquestado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SaludosResponse"
+        "500":
+          description: Error interno del servidor
+components:
+  schemas:
+    SaludoRequest:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: Nombre de la persona a saludar
+          example: "River"
+    SaludosResponse:
+      type: object
+      properties:
+        saludoPersonalizado:
+          type: string
+          description: Saludo del sa-crea-saludo
+          example: "Hola, Developer"
+        mensajeSistema:
+          type: string
+          description: Mensaje del sa-hello-world
+          example: "Hello World API"
+        estadoSistema:
+          type: string
+          description: Estado del sa-hello-world
+          example: "UP"
