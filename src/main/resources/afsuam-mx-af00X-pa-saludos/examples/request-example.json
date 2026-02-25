@@ -1,1 +1,6 @@
-{}
+{
+  "data": {
+    "nombre": "Universo",
+    "mensajePersonalizado": "Este es un saludo especial desde la capa superior"
+  }
+}
