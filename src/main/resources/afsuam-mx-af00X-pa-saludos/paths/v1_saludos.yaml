@@ -1,0 +1,30 @@
+post:
+  tags:
+    - Saludos
+  summary: Orquesta llamadas a SAPIs para generar un saludo compuesto
+  operationId: createSaludos
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../components/schemas/saludo-request.yaml"
+        examples:
+          success:
+            summary: Petición de ejemplo
+            value:
+              $ref: "../examples/request-example.json"
+  responses:
+    "200":
+      description: Saludo orquestado exitosamente
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas/saludos-response.yaml"
+          examples:
+            success:
+              summary: Respuesta de ejemplo
+              value:
+                $ref: "../examples/response-example.json"
+    "500":
+      description: Error interno del servidor

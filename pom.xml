@@ -123,7 +123,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/afsuam-mx-af00X-pa-saludos/v1-saludos.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/src/main/resources/afsuam-mx-af00X-pa-saludos/afsuam_mx_af00X_pa_saludos.yml</inputSpec>
                             <generatorName>spring</generatorName>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <strictSpec>true</strictSpec>
