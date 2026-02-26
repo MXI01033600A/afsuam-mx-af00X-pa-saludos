@@ -1,0 +1,8 @@
+type: object
+required:
+  - name
+properties:
+  name:
+    type: string
+    description: Nombre de la persona a saludar
+    example: "River"

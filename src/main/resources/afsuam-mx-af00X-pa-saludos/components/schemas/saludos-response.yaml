@@ -1,0 +1,14 @@
+type: object
+properties:
+  saludoPersonalizado:
+    type: string
+    description: Saludo del sa-crea-saludo
+    example: "Hola, Developer"
+  mensajeSistema:
+    type: string
+    description: Mensaje del sa-hello-world
+    example: "Hello World API"
+  estadoSistema:
+    type: string
+    description: Estado del sa-hello-world
+    example: "UP"
